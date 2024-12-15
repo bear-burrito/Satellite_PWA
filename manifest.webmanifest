@@ -1,9 +1,9 @@
 {
-  "name": "Github Page PWA",
+  "name": "Satellite PWA",
   "short_name": "GPPWA",
   "description": "Github Page as a Progressive Web App",
-  "scope": "/github-page-pwa/",
-  "start_url": "/github-page-pwa/",
+  "scope": "/Satellite_PWA/",
+  "start_url": "/Satellite_PWA/",
   "background_color": "#ffffff",
   "theme_color": "#ffffff",
   "display": "standalone", 
