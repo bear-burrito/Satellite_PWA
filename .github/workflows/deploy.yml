@@ -19,12 +19,14 @@ jobs:
         node-version: '14'
 
     - name: Install dependencies
+      working-directory: Satellite_PWA/Satellite_PWA
       run: npm install
 
     - name: Build the site
       env:
         CLIENT_ID: ${{ secrets.CLIENT_ID }}
         CLIENT_SECRET: ${{ secrets.CLIENT_SECRET }}
+      working-directory: Satellite_PWA/Satellite_PWA
       run: |
         mkdir -p public
         echo "window._env_ = { CLIENT_ID: '${{ secrets.CLIENT_ID }}', CLIENT_SECRET: '${{ secrets.CLIENT_SECRET }}' };" > public/env.js
@@ -34,4 +36,4 @@ jobs:
       uses: peaceiris/actions-gh-pages@v3
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
-        publish_dir: ./public
+        publish_dir: ./Satellite_PWA/Satellite_PWA/public
