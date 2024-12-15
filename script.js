@@ -1,9 +1,12 @@
 async function generateImage() {
     const inputText = document.getElementById('inputText').value;
 
+    // Fetch the secrets injected by GitHub Actions
+    const env = window._env_ || { CLIENT_ID: '', CLIENT_SECRET: '' };
+    const CLIENT_ID = env.CLIENT_ID;
+    const CLIENT_SECRET = env.CLIENT_SECRET;
+
     // Sentinel Hub API details
-    const CLIENT_ID = 'YOUR_CLIENT_ID';
-    const CLIENT_SECRET = 'YOUR_CLIENT_SECRET';
     const TOKEN_URL = 'https://identity.dataspace.copernicus.eu/auth/realms/CDSE/protocol/openid-connect/token';
     const PROCESS_URL = 'https://sh.dataspace.copernicus.eu/api/v1/process';
 
