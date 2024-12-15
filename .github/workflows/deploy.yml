@@ -26,6 +26,7 @@ jobs:
         CLIENT_ID: ${{ secrets.CLIENT_ID }}
         CLIENT_SECRET: ${{ secrets.CLIENT_SECRET }}
       run: |
+        mkdir -p public
         echo "window._env_ = { CLIENT_ID: '${{ secrets.CLIENT_ID }}', CLIENT_SECRET: '${{ secrets.CLIENT_SECRET }}' };" > public/env.js
         npm run build
 
