@@ -1,0 +1,12 @@
+{
+  "name": "satellite_pwa",
+  "version": "1.0.0",
+  "description": "A progressive web app to display satellite images.",
+  "main": "index.js",
+  "scripts": {
+    "build": "echo 'Building site...' && mkdir -p public && cp -r src/* public/"
+  },
+  "keywords": [],
+  "author": "Your Name",
+  "license": "ISC"
+}
